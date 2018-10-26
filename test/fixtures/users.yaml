@@ -1,0 +1,19 @@
+wang1:
+  name: wang
+  email: wang@b.c
+  password_digest: <%= User.digest('password')%>
+
+another:
+  name: wangwang
+  email: wangwang@b.b
+  password_digest: <%= User.digest('password')%>
+
+ <% 30.times do |n| %>
+    user_<%= n %>:
+    name: <%= "User #{n}" %>
+    email: <%= "user-#{n}@example.com" %>
+    password_digest: <%= User.digest('password') %>
+<% end %>
+
+
+  

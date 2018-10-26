@@ -1,5 +1,0 @@
-wang:
-  name: wang
-  email: wang@b.b
-  password_digest: <%= User.digest('password')%>
-  

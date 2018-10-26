@@ -1,10 +1,8 @@
 require 'test_helper'
 
-
-class UersLoginTest < ActionDispatch::IntegrationTest
-
+class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
-    @user = users(:wang)
+    @user = users(:wang1)
   end
 
   test "login with invalid information" do
@@ -58,6 +56,7 @@ class UersLoginTest < ActionDispatch::IntegrationTest
     log_in_as(@user, remember_me:'1')
     assert_equal cookies['remember_token'], assigns(:user).remember_token
     end
+    
     test "login without remembering"do
      log_in_as(@user, remember_me:'0')
      assert_nil cookies['remember_token']
